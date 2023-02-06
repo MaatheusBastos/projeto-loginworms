@@ -1,0 +1,249 @@
+.cabecalho {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	color: var(--bege-claro);
+	font-family: var(--fonte-principal); 
+	background-color: var(--roxo-escuro);
+}
+
+.cabecalho__logo {
+	display: flex;
+	align-items: center;
+	padding-top: 1rem;
+}
+
+.cabecalho__titulo__logo {
+	color: #000000;
+	font-weight: 700;
+	font-size: 2rem;
+	padding: 0 1rem;
+}
+
+strong {
+	color: var(--roxo-claro)
+}
+
+.cabecalho__lista {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem 0;
+}
+
+.cabecalho__item {
+	transition: all 0.5s step-start;
+	padding: 0.25rem 0; 
+}
+
+.cabecalho__item:hover {
+	border-bottom: 2px solid var(--roxo-claro);
+	vertical-align: bottom;
+}
+
+.secao__login {
+	background-image: url(https://cdn.dribbble.com/users/427857/screenshots/13993146/media/da6ec8e324070106c8d30a31b4f97c9a.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	height: 65vh;
+}
+
+.login__area {
+	display: grid;
+	grid-template-columns: 1fr 0.65fr;
+	grid-template-rows: 0.2fr 0.5fr 0.5fr 1fr;
+	grid-template-areas:  
+	"logo cadastro"
+	"titulo titulo"
+	"botaogoogle botaogoogle"
+	"formulario formulario"
+	;
+
+	background-color: rgb(255, 251, 245, 0.5);
+	font-family: var(--fonte-secundaria);
+	height: 50vh;
+	padding: 3rem 2rem;
+	border-radius: 15px;
+}
+
+.login__nome__logo {
+	display: flex;
+	align-items: center;
+	font-family: var(--fonte-principal);
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.5rem;
+	grid-area: logo;
+}
+
+.login__nome__logo::before {
+	content: url(http://127.0.0.1:5500/img/worm.png);
+	padding-right: 0.5rem;
+}
+
+.login__cadastro {
+	font-size: 0.9rem;
+	align-self: center;
+	text-align: right;
+	color: var(--roxo-escuro);
+	font-weight: 500;
+	grid-area: cadastro;
+}
+
+.login__titulo {
+	font-size: 3rem;
+	font-weight: 700;
+	align-self: center;
+	grid-area: titulo;
+}
+
+.login__link {
+	display: flex;
+	align-self: flex-start;
+	justify-content: center;
+	height: 35%;
+	padding: 0.5rem;
+	border-radius: 10px;
+	align-items: center;
+	background-color: var(--roxo-escuro);
+	color: var(--bege-claro);
+	grid-area: botaogoogle;
+}
+
+.login__link::before {
+	content: url(https://cdn-icons-png.flaticon.com/24/281/281747.png);
+	padding: 0 0.5rem;
+	
+}
+
+.formulario {
+	grid-area: formulario;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.login__texto {
+	color: var(--cinza-escuro);
+	font-weight: 700;
+}
+
+.login__input {
+	width: 100%;
+  border-radius: 10px;
+	padding: 0.75rem;
+	margin: 0.75rem 0;
+	border: none;
+}
+
+
+.login__botao {
+	color: var(--bege-claro);
+	background-color: #000000;
+	padding: 0.75rem;
+	border-radius: 10px;
+	width: 50%;
+	cursor: pointer;
+	border: none;
+}
+
+.rodape {
+	background-color: var(--roxo-escuro);
+	height: 21vh	;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.rodape__titulo {
+	font-weight: 700;
+	color: var(--bege-claro);
+}
+
+.rodape__lista {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	.cabecalho {
+		justify-content: space-between;
+		height: 15vh;
+	}
+
+	.cabecalho__logo {
+		padding: 0;
+	}
+
+	.login__area {
+		width: 45%;
+	}
+
+	.login__nome__logo {
+		font-size: 1.75rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.secao__login {
+		height: 90vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.login__nome__logo {
+		font-size: 2rem;
+	}
+
+	.login__area {
+		width: 50%;
+		height: 70%;	
+	}
+
+	.login__titulo {
+		font-size: 4rem;
+	}
+
+	.login__cadastro {
+		font-size: 1.1rem;
+	}
+
+	.login__link {
+		font-size: 1.25rem;
+	}
+
+	.login__link::before {
+		content: url(https://cdn-icons-png.flaticon.com/24/281/281747.png);
+	}
+
+	.login__texto {
+		font-size: 1.25rem;
+	}
+
+	.login__botao {
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.secao__login {
+		height: 100vh;
+	}
+
+	.login__area {
+		width: 30%;
+		height: 60%;
+	}
+}

@@ -1,0 +1,17 @@
+:root {
+	--branco: #FFFFFF;
+	--azul: #0c61e0;
+	--bege-claro: #FFFBF5;
+	--bege-escuro: #F7EFE5;
+	--roxo-claro: #C3ACD0;
+	--roxo-escuro: #674188;
+	--cinza-claro: #CCCCCC;
+	--cinza-escuro: #555555;
+	--fonte-principal: 'Underdog', sans-serif;
+	--fonte-secundaria: 'Chakra Petch', sans-serif;
+}
+
+.container {
+	padding-right: 6%;
+	padding-left: 6%;
+}
